@@ -1,7 +1,7 @@
 name: day_night_themed_switcher
 description: "A beautiful day and night switch"
-version: 0.0.1
-#homepage:
+version: 1.0.0
+repository: https://github.com/yashas-hm/day-night-themed-switcher
 
 environment:
   sdk: '>=3.3.3 <4.0.0'

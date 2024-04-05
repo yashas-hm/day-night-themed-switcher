@@ -38,7 +38,7 @@ class _DayNightSwitchState extends State<DayNightSwitch>
     dark = widget.initiallyDark;
 
     height = widget.size;
-    width = widget.size * (7/3);
+    width = widget.size * (7 / 3);
 
     animationController = AnimationController(
       vsync: this,
@@ -56,7 +56,7 @@ class _DayNightSwitchState extends State<DayNightSwitch>
       ),
     );
 
-    if(dark){
+    if (dark) {
       animationController.value = animationController.upperBound;
     }
 
@@ -68,8 +68,8 @@ class _DayNightSwitchState extends State<DayNightSwitch>
     return MouseRegion(
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
-        onPanUpdate: (_){
-          if(!animationController.isAnimating){
+        onPanUpdate: (_) {
+          if (!animationController.isAnimating) {
             setState(() {
               if (animationController.value == animationController.upperBound) {
                 animationController.reverse();
@@ -105,19 +105,19 @@ class _DayNightSwitchState extends State<DayNightSwitch>
                 switchOutCurve: Curves.easeOut,
                 child: dark
                     ? SvgPicture.string(
-                  key: const ValueKey<String>('night'),
-                  night,
-                  height: height,
-                  width: width,
-                  fit: BoxFit.cover,
-                )
+                        key: const ValueKey<String>('night'),
+                        night,
+                        height: height,
+                        width: width,
+                        fit: BoxFit.cover,
+                      )
                     : SvgPicture.string(
-                  key: const ValueKey<String>('day'),
-                  day,
-                  height: height,
-                  width: width,
-                  fit: BoxFit.cover,
-                ),
+                        key: const ValueKey<String>('day'),
+                        day,
+                        height: height,
+                        width: width,
+                        fit: BoxFit.cover,
+                      ),
               ),
               Align(
                 alignment: Alignment.centerLeft,
@@ -134,19 +134,19 @@ class _DayNightSwitchState extends State<DayNightSwitch>
                       switchOutCurve: Curves.easeOut,
                       child: dark
                           ? SvgPicture.string(
-                        key: const ValueKey<String>('night'),
-                        moon,
-                        height: height,
-                        width: height,
-                        fit: BoxFit.fill,
-                      )
+                              key: const ValueKey<String>('night'),
+                              moon,
+                              height: height,
+                              width: height,
+                              fit: BoxFit.fill,
+                            )
                           : SvgPicture.string(
-                        key: const ValueKey<String>('day'),
-                        sun,
-                        height: height,
-                        width: height,
-                        fit: BoxFit.fill,
-                      ),
+                              key: const ValueKey<String>('day'),
+                              sun,
+                              height: height,
+                              width: height,
+                              fit: BoxFit.fill,
+                            ),
                     ),
                   ),
                 ),
