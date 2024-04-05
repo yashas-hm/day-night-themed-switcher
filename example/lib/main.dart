@@ -27,7 +27,7 @@ class _MyAppState extends State<MyApp> {
           child: DayNightSwitch(
             // duration: Duration(milliseconds: 800),
             // initiallyDark: true,
-            size: 20,
+            size: 80,
             onChange: (dark) => setState(() {
               if (dark) {
                 theme = ThemeMode.dark;
