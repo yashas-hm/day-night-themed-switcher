@@ -34,6 +34,18 @@ class _DayNightSwitchState extends State<DayNightSwitch>
   bool dark = true;
 
   @override
+  void didChangeDependencies() {
+    setState(() {});
+    super.didChangeDependencies();
+  }
+
+  @override
+  void didUpdateWidget(covariant DayNightSwitch oldWidget) {
+    setState(() {});
+    super.didUpdateWidget(oldWidget);
+  }
+
+  @override
   void initState() {
     dark = widget.initiallyDark;
 

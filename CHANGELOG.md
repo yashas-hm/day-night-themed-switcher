@@ -5,3 +5,7 @@
 ## 1.0.1
 
 * Platforms added for pub.dev
+
+## 1.1.0
+
+* Update widget on changes
