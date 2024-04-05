@@ -27,21 +27,17 @@ such as duration, initiallyDark, and size, allowing you to craft the perfect app
 🛠️💫
 
 ```dart
-DayNightSwitch
-(
-// duration: Duration(milliseconds: 800),
-// initiallyDark: true,
-size: 20,
-onChange: (dark) => setState(() {
-if (dark) {
-theme = ThemeMode.dark;
-} else {
-theme = ThemeMode.light;
-}
-})
-,
-)
-,
+DayNightSwitch(
+  // duration: Duration(milliseconds: 800),
+  // initiallyDark: true,
+  size: 20,onChange: (dark) => setState(() {
+    if (dark) {
+      theme = ThemeMode.dark;
+    } else {
+      theme = ThemeMode.light;
+    }
+  }),
+);
 ```
 
 ## Contributions
