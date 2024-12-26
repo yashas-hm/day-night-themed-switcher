@@ -2,7 +2,8 @@ import 'package:day_night_themed_switcher/src/painters.dart';
 import 'package:flutter/material.dart' hide BoxShadow, BoxDecoration;
 import 'package:flutter_inset_box_shadow/flutter_inset_box_shadow.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-/// [DayNightSwitch] is a widget that allows you to elevate your app's charm 
+
+/// [DayNightSwitch] is a widget that allows you to elevate your app's charm
 /// with a sleek day/night switcher widget in pure Dart – because toggling be
 /// tween light and dark modes should be as effortless as a flicker of magic!
 class DayNightSwitch extends StatefulWidget {
@@ -15,18 +16,18 @@ class DayNightSwitch extends StatefulWidget {
     required this.onChange,
   });
 
-  /// [DayNightSwitch.size] override the default icon size of 
+  /// [DayNightSwitch.size] override the default icon size of
   /// [DayNightSwitch] icons
   final double size;
 
-  /// [DayNightSwitch.initiallyDark] bool is used to set initial state of 
-  /// [DayNightSwitch] 
+  /// [DayNightSwitch.initiallyDark] bool is used to set initial state of
+  /// [DayNightSwitch]
   final bool initiallyDark;
 
-  /// [DayNightSwitch.size] override the animation duration of [DayNightSwitch] 
+  /// [DayNightSwitch.size] override the animation duration of [DayNightSwitch]
   final Duration duration;
 
-  /// Callback function [DayNightSwitch.onChange] is used to fetch the current 
+  /// Callback function [DayNightSwitch.onChange] is used to fetch the current
   /// state of [DayNightSwitch] ultimately indicating theme
   final Function(bool) onChange;
 
