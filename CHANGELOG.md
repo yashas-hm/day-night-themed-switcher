@@ -25,3 +25,7 @@
 ## 1.2.3
 
 * Documentation Added
+
+## 1.2.4
+
+* `flutter_inset_box_shadow` dependency switched to `flutter_inset_shadow`

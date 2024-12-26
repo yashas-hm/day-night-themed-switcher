@@ -1,7 +1,7 @@
 import 'package:day_night_themed_switcher/src/painters.dart';
 import 'package:flutter/material.dart' hide BoxShadow, BoxDecoration;
-import 'package:flutter_inset_box_shadow/flutter_inset_box_shadow.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:flutter_inset_shadow/flutter_inset_shadow.dart';
 
 /// [DayNightSwitch] is a widget that allows you to elevate your app's charm
 /// with a sleek day/night switcher widget in pure Dart – because toggling be
