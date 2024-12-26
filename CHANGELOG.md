@@ -29,3 +29,7 @@
 ## 1.2.4
 
 * `flutter_inset_box_shadow` dependency switched to `flutter_inset_shadow`
+
+## 1.2.5
+
+* Demo asset added
