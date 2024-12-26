@@ -9,3 +9,7 @@
 ## 1.1.0
 
 * Update widget on changes
+
+## 1.2.0
+
+* Dependency update
