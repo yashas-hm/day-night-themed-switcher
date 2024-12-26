@@ -13,3 +13,7 @@
 ## 1.2.0
 
 * Dependency update
+
+## 1.2.1
+
+* Documentation Added
