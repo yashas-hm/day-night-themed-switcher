@@ -21,3 +21,7 @@
 ## 1.2.2
 
 * Dart format fix
+
+## 1.2.3
+
+* Documentation Added
