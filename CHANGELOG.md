@@ -33,3 +33,8 @@
 ## 1.2.5
 
 * Demo asset added
+
+## 1.2.6
+
+* `didUpdateWidget` bug fixed
+* update dependencies

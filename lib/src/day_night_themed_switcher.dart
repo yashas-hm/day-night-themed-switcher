@@ -1,7 +1,7 @@
 import 'package:day_night_themed_switcher/src/painters.dart';
 import 'package:flutter/material.dart' hide BoxShadow, BoxDecoration;
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:flutter_inset_shadow/flutter_inset_shadow.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 /// [DayNightSwitch] is a widget that allows you to elevate your app's charm
 /// with a sleek day/night switcher widget in pure Dart – because toggling be
@@ -52,7 +52,15 @@ class _DayNightSwitchState extends State<DayNightSwitch>
 
   @override
   void didUpdateWidget(covariant DayNightSwitch oldWidget) {
-    setState(() {});
+    dark = widget.initiallyDark;
+
+    height = widget.size;
+    width = widget.size * (7 / 3);
+    if (dark) {
+      animationController.value = animationController.upperBound;
+    }
+
+    animate();
     super.didUpdateWidget(oldWidget);
   }
 
@@ -86,6 +94,18 @@ class _DayNightSwitchState extends State<DayNightSwitch>
     super.initState();
   }
 
+  void animate() {
+    setState(() {
+      if (animationController.value == animationController.upperBound) {
+        animationController.reverse();
+      } else {
+        animationController.forward();
+      }
+      dark = !dark;
+      widget.onChange(dark);
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MouseRegion(
@@ -93,26 +113,10 @@ class _DayNightSwitchState extends State<DayNightSwitch>
       child: GestureDetector(
         onPanUpdate: (_) {
           if (!animationController.isAnimating) {
-            setState(() {
-              if (animationController.value == animationController.upperBound) {
-                animationController.reverse();
-              } else {
-                animationController.forward();
-              }
-              dark = !dark;
-              widget.onChange(dark);
-            });
+            animate();
           }
         },
-        onTap: () => setState(() {
-          if (animationController.value == animationController.upperBound) {
-            animationController.reverse();
-          } else {
-            animationController.forward();
-          }
-          dark = !dark;
-          widget.onChange(dark);
-        }),
+        onTap: animate,
         child: Container(
           height: height,
           width: width,

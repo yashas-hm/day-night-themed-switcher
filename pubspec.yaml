@@ -1,6 +1,6 @@
 name: day_night_themed_switcher
 description: "Elevate your app's charm with a sleek day/night switcher widget in pure Dart – because toggling between light and dark modes should be as effortless as a flicker of magic!"
-version: 1.2.5
+version: 1.2.6
 repository: https://github.com/yashas-hm/day-night-themed-switcher
 
 platforms:
@@ -18,7 +18,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_svg: ^2.0.16
+  flutter_svg: ^2.1.0
   flutter_inset_shadow: ^2.0.3
 
 dev_dependencies:
