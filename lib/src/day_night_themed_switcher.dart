@@ -46,31 +46,20 @@ class _DayNightSwitchState extends State<DayNightSwitch>
 
   @override
   void didChangeDependencies() {
-    setState(() {});
+    setWidget();
+    animate(updateWidget: true);
     super.didChangeDependencies();
   }
 
   @override
   void didUpdateWidget(covariant DayNightSwitch oldWidget) {
-    dark = widget.initiallyDark;
-
-    height = widget.size;
-    width = widget.size * (7 / 3);
-    if (dark) {
-      animationController.value = animationController.upperBound;
-    }
-
-    animate();
+    setWidget();
+    animate(updateWidget: true);
     super.didUpdateWidget(oldWidget);
   }
 
   @override
   void initState() {
-    dark = widget.initiallyDark;
-
-    height = widget.size;
-    width = widget.size * (7 / 3);
-
     animationController = AnimationController(
       vsync: this,
       duration: widget.duration,
@@ -87,23 +76,32 @@ class _DayNightSwitchState extends State<DayNightSwitch>
       ),
     );
 
-    if (dark) {
-      animationController.value = animationController.upperBound;
-    }
+    setWidget();
 
     super.initState();
   }
 
-  void animate() {
-    setState(() {
-      if (animationController.value == animationController.upperBound) {
-        animationController.reverse();
-      } else {
-        animationController.forward();
-      }
+  void setWidget() {
+    dark = widget.initiallyDark;
+
+    height = widget.size;
+    width = widget.size * (7 / 3);
+
+    if (dark) {
+      animationController.value = animationController.upperBound;
+    }
+  }
+
+  void animate({bool updateWidget = false}) {
+    if (animationController.value == animationController.upperBound) {
+      animationController.reverse();
+    } else {
+      animationController.forward();
+    }
+    if (!updateWidget) {
       dark = !dark;
       widget.onChange(dark);
-    });
+    }
   }
 
   @override

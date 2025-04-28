@@ -38,3 +38,8 @@
 
 * `didUpdateWidget` bug fixed
 * update dependencies
+
+## 2.0.0
+
+* Bug Fixes
+* Updated Dependencies
