@@ -197,4 +197,10 @@ class _DayNightSwitchState extends State<DayNightSwitch>
       ),
     );
   }
+
+  @override
+  void dispose() {
+    animationController.dispose();
+    super.dispose();
+  }
 }
