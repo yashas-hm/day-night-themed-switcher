@@ -45,6 +45,12 @@ class _DayNightSwitchState extends State<DayNightSwitch>
   bool dark = true;
 
   @override
+  void dispose() {
+    animationController.dispose();
+    super.dispose();
+  }
+
+  @override
   void didChangeDependencies() {
     setWidget();
     animate(updateWidget: true);
@@ -53,6 +59,7 @@ class _DayNightSwitchState extends State<DayNightSwitch>
 
   @override
   void didUpdateWidget(covariant DayNightSwitch oldWidget) {
+    if (oldWidget.initiallyDark == widget.initiallyDark) return;
     setWidget();
     animate(updateWidget: true);
     super.didUpdateWidget(oldWidget);

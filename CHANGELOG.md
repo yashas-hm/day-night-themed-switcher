@@ -43,3 +43,8 @@
 
 * Bug Fixes
 * Updated Dependencies
+
+
+## 2.0.1
+
+* Bug Fixes
