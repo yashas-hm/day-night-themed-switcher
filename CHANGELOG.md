@@ -48,3 +48,7 @@
 ## 2.0.1
 
 * Bug Fixes
+
+## 2.0.2
+
+* Bug Fixes

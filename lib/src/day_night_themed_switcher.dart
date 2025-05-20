@@ -29,7 +29,7 @@ class DayNightSwitch extends StatefulWidget {
 
   /// Callback function [DayNightSwitch.onChange] is used to fetch the current
   /// state of [DayNightSwitch] ultimately indicating theme
-  final Function(bool) onChange;
+  final ValueChanged<bool> onChange;
 
   @override
   State createState() => _DayNightSwitchState();
@@ -106,8 +106,10 @@ class _DayNightSwitchState extends State<DayNightSwitch>
       animationController.forward();
     }
     if (!updateWidget) {
-      dark = !dark;
-      widget.onChange(dark);
+      setState(() {
+        dark = !dark;
+        widget.onChange(dark);
+      });
     }
   }
 
